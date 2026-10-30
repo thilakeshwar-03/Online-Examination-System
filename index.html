@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Examination System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Online Examination System</h1>
+        <p>Test Your Knowledge Online</p>
+    </header>
+
+    <!-- Login -->
+    <section id="login">
+        <h2>Student Login</h2>
+        <input type="text" id="username"
+               placeholder="Enter your name">
+        <input type="password" id="password"
+               placeholder="Enter your password">
+        <button onclick="login()">Login</button>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="hidden">
+        <h2 id="welcome"></h2>
+        <h3>Available Examinations</h3>
+
+        <div class="exam-card">
+            <h3>Java Programming</h3>
+            <p>5 Questions | 2 Minutes</p>
+            <button onclick="startExam()">Start Exam</button>
+        </div>
+    </section>
+
+    <!-- Exam -->
+    <section id="exam" class="hidden">
+        <div class="exam-header">
+            <h2>Java Programming Exam</h2>
+            <h3 id="timer">02:00</h3>
+        </div>
+
+        <h3 id="question"></h3>
+        <div id="options"></div>
+
+        <div class="navigation">
+            <button onclick="previousQuestion()">Previous</button>
+            <button onclick="nextQuestion()">Next</button>
+            <button onclick="submitExam()">Submit Exam</button>
+        </div>
+    </section>
+
+    <!-- Result -->
+    <section id="result" class="hidden">
+        <h2>Examination Result</h2>
+        <h3 id="score"></h3>
+        <p id="message"></p>
+        <button onclick="location.reload()">Back to Home</button>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
